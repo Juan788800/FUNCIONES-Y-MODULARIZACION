@@ -9,28 +9,7 @@
 // calculadora
 import promptSync from "prompt-sync";
 const prompt = promptSync();
-// funcion 1 sumar
-function sumar (a , b){
-    return a + b;
-}
-
-// funcion 2 restar
-
-function restar (a ,b){
-    return a - b;
-}
-
-// funcion 3 dividir 
-
-function dividir (a , b ){
-    return a / b;
-}
-
-// funcion 4 multiplicar
-
-function multiplicar ( a , b){
-    return a * b;
-}
+import { sumar, restar, multiplicar, dividir } from './operaciones/index.js';
 
 console.log("calculadora");
 var continuar = true;

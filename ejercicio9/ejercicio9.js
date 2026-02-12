@@ -7,41 +7,7 @@
 
 import promptSync from "prompt-sync";
 const prompt = promptSync();
-
-// Funcion 1 Verificar si es par o impar
-function esPar(numero) {
-    if (numero % 2 === 0) {
-        return "PAR";
-    } else {
-        return "IMPAR";
-    }
-}
-
-// Funcion 2 Verificar si es positivo o negativo
-function esPositivo(numero) {
-    if (numero > 0) {
-        return "POSITIVO";
-    } else if (numero < 0) {
-        return "NEGATIVO";
-    } else {
-        return "CERO";
-    }
-}
-
-// Funcion 3 Verificar si es primo
-function esPrimo(numero) {
-    if (numero <= 1) {
-        return false;
-    }
-    
-    for (let i = 2; i < numero; i++) {
-        if (numero % i === 0) {
-            return false;
-        }
-    }
-    
-    return true;
-}
+import { esPar, esPositivo, esPrimo } from './operaciones/index.js';
 
 // mostrar resultados
 function mostrarResultado(numero) {

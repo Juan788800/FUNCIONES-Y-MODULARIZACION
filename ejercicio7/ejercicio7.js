@@ -8,31 +8,9 @@
 
 import promptSync from "prompt-sync";
 const prompt = promptSync();
-
+import {consultarSaldo , depositar, retirar} from './operaciones/index.js';
 let saldo = 0;
 
-// Función 1 Depositar
-function depositar(monto) {
-    saldo = saldo + monto;
-    console.log("Depositado: $" + monto);
-    console.log("Saldo actual: $" + saldo);
-}
-
-// Función 2 Retirar
-function retirar(monto) {
-    if (monto > saldo) {
-        console.log("Saldo insuficiente");
-    } else {
-        saldo = saldo - monto;
-        console.log("Retirado: $" + monto);
-        console.log("Saldo actual: $" + saldo);
-    }
-}
-
-// Función 3 Consultar
-function consultarSaldo() {
-    console.log( "Saldo: $" + saldo);
-}
 
 // Programa principal
 console.log("cajero automatico");

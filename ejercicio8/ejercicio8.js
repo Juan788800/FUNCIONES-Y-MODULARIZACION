@@ -7,23 +7,11 @@
 
 import promptSync from "prompt-sync";
 const prompt = promptSync();
-// Funciones
-function calcularSubtotal(precio, cantidad) {
-    return precio * cantidad;
-}
+import {calcularIVA , calcularSubtotal, calcularTotal} from './operaciones/index.js';
 
-function calcularIVA(total) {
-    return total * 0.19;
-}
-
-function calcularTotal(totalSinIVA, iva) {
-    return totalSinIVA + iva;
-}
-
-// P
 console.log("factura de compra");
 
-let numero_productos = parseInt(prompt("¿Cuántos productos? "));
+let numero_productos = parseInt(prompt("¿Cuantos productos? "));
 
 let totalSinIVA = 0;
 let detalleProductos = "";
